@@ -5,16 +5,16 @@ import java.util.logging.Logger;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class IsotonictyImpl implements IsotonictyRepository {
+public class IsotonicityImpl implements IsotonicityRepository {
 	protected Logger logger = Logger
-			.getLogger(IsotonictyImpl.class.getName());
+			.getLogger(IsotonicityImpl.class.getName());
 
 
 
 	@Override
-	public String getIsotonicty(String serumOsmol) {
+	public String getisotonicity(String serumOsmol_isotonicity) {
 		// TODO Auto-generated method stub
-		if((Integer.parseInt(serumOsmol)>280) && (Integer.parseInt(serumOsmol)<295)) {
+		if((Integer.parseInt(serumOsmol_isotonicity)>280) && (Integer.parseInt(serumOsmol_isotonicity)<295)) {
 			
 			return "isotonic";
 		}

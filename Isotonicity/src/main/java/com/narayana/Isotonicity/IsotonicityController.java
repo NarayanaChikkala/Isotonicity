@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class IsotonictyController {
+public class IsotonicityController {
 	@Autowired
-	IsotonictyRepository isotnicrepository;
+	IsotonicityRepository isotonicityrepository;
 	
 	protected Logger logger = Logger
-			.getLogger(IsotonictyController.class.getName());
+			.getLogger(IsotonicityController.class.getName());
 	
-	@RequestMapping("/Isotonicty/{serumOsmol}")
-	public String Isotonicty(@PathVariable("serumOsmol") String serumOsmol) {
-		logger.info("accounts-changed byId() invoked: " + serumOsmol);
-		String retVal = isotnicrepository.getIsotonicty(serumOsmol);
+	@RequestMapping("/isotonicity/{serumOsmol_isotonicity}")
+	public String isotonicity(@PathVariable("serumOsmol_isotonicity") String serumOsmol_isotonicity) {
+		logger.info("accounts-changed byId() invoked: " + serumOsmol_isotonicity);
+		String retVal = isotonicityrepository.getisotonicity(serumOsmol_isotonicity);
 		logger.info("accounts-microservice byId() found: " + retVal);
 		return retVal;
 	}
